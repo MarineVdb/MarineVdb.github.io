@@ -70,12 +70,12 @@ header img {
  width: 100%;
 }
 
-author {
+.author {
   grid-area: 3 / 4 / 4 / 5;
   z-index: 2;
   color: White;
   font-size: 40px;
-  font-family: amatic;
+  font-family: amatic, Arial, sans-serif;
   font-weight: bold;
   justify-self: center;
 }
@@ -100,21 +100,18 @@ article a:hover{
 }
 
 #signature { 
-  font-family: amatic;
+  font-family: amatic,Arial, sans-serif;
   font-weight: bold;
 }
 
 aside {
   grid-area: 7 / 1 / 9 / 2; 
 }
-
-aside img {
-  width: 60px;
-  height: 50px;
-  margin: 10px 30px;
+aside i {
+  color:#6B799E;
 }
 
-aside img:hover {
+aside i:hover {
   -webkit-transform: scale(1.3);
 	transform: scale(1.3);
 }
@@ -136,7 +133,7 @@ footer {
 
 .cvgrid {
   display: grid;
-  grid-template: repeat(20, 60px) / repeat(12, 1fr);
+  grid-template: repeat(21, 60px) / repeat(12, 1fr);
   width: 100%;
 }
 
@@ -151,21 +148,21 @@ footer {
 .box h2 {
   font-size: 30px;
   color: #9C8F96;
-  font-family: amatic;
+  font-family: amatic, Arial, sans-serif;
   text-align: center;
   margin-bottom: 0px;
 }
 
 .box h3 {
   font-size: 20px;
-  font-family: amatic;
+  font-family: amatic, Arial, sans-serif;
   text-align: center;
   margin-top: 0px;
 }
 
 .nom {
   grid-area : 2 / 1 / 4 / 4;
-  font-family: amatic;
+  font-family: amatic, Arial, sans-serif;
   font-size: 60px;
   color: white;
   text-align: center;
@@ -264,7 +261,7 @@ footer {
   grid-area : 16 / 1 / 21 / 5;
   z-index: 2;
   color: #434a5e;
-  font-family: amatic;
+  font-family: amatic, Arial, sans-serif;
   font-size: 20px;
 }
 .monde{
@@ -301,25 +298,40 @@ footer {
 }
 
 #ilove {
-  filter: grayscale(80%);
+  filter: grayscale(20%);
   text-align: center;
 }
 #avion {
-  height: 100px;
-  width : 100px;
+  height: 90px;
+  width : 90px;
   opacity: 0.6;
 }
 #livre {
   height: 130px;
   width : 130px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 #recycle {
   height: 60px;
   width : 60px;
-  filter: grayscale(100%);
+  filter: grayscale(30%);
   opacity: 0.6;
 }
+
+.cvfooter {
+  grid-area: 21 / 1 / 22 / 13;
+}
+/* Projets*/
+
+.chargement{
+  grid-area : 5 / 1 / 8 / 5;
+  text-align : center;
+  color: #9C8F96;
+}
+
+
+
+
 
 
 
