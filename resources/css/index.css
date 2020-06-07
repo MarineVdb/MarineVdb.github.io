@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'open';  
+  src: url('../fonts/OpenSansCondensed-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'amatic';  
+  src: url('../fonts/AmaticSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0 auto;
+  font-family: open, Arial, sans-serif;
+}
+
+nav {
+  background-color: #a6c2ce;
+  height: 60px;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+}
+
+nav ul {
+  margin: auto;
+  text-align: center;
+  bottom: 35px;
+}
+
+nav li{
+  font-size: 25px;
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 15px;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover{
+  color: #6b799e;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  grid-template: repeat(12,60px)/ repeat(4, 1fr);
+}
+
+/* Page d'accueil */
+header {
+  grid-area: 1 / 1 / 6 / 5;
+  display: flex;
+}
+
+header img {
+ width: 100%;
+}
+
+author {
+  grid-area: 3 / 4 / 4 / 5;
+  z-index: 2;
+  color: White;
+  font-size: 40px;
+  font-family: amatic;
+  font-weight: bold;
+  justify-self: center;
+}
+
+article {
+  grid-area: 6 / 2 / 11 / 4;
+  font-size: 20px;
+}
+
+article h1 {
+  text-align: center justify;
+  font-size: 40px;
+  color: #9C8F96;
+}
+article a {
+  text-decoration: none ;
+  color: #9C8F96;
+}
+
+article a:hover{
+  color: #6b799e;
+}
+
+#signature { 
+  font-family: amatic;
+  font-weight: bold;
+}
+
+aside {
+  grid-area: 7 / 1 / 9 / 2; 
+}
+
+aside img {
+  width: 60px;
+  height: 50px;
+  margin: 10px 30px;
+}
+
+aside img:hover {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+aside li {
+  list-style-type: none;
+}
+
+footer {
+  background-color: #A6C2CE ;
+  grid-area: 12 / 1 / 13 / 5;
+  height: 100%;
+  text-align: center;
+  color:white;
+  padding-top: 20px;
+}
+
+/* Mon CV */
+
+.cvgrid {
+  display: grid;
+  grid-template: repeat(20, 60px) / repeat(12, 1fr);
+  width: 100%;
+}
+
+.box {
+  border-bottom: 4px solid #9C8F96;
+  border-right: 1px solid #9C8F96;
+  font-size: 17px;
+  padding : 20px 20px;
+  text-align: justify;
+}
+
+.box h2 {
+  font-size: 30px;
+  color: #9C8F96;
+  font-family: amatic;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.box h3 {
+  font-size: 20px;
+  font-family: amatic;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.nom {
+  grid-area : 2 / 1 / 4 / 4;
+  font-family: amatic;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #ece4e8;
+}
+
+.presentation {
+  grid-area : 2 / 4 / 4 / 13;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 10px;
+  line-height: 40px;
+}
+
+#specialite {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.photo {
+  grid-area : 4 / 1 / 10 / 5;
+  background-image: url("../images/moi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.codeacademy {
+  grid-area : 4 / 5 / 10/ 9;
+}
+
+.vinted {
+  grid-area : 4 / 9 / 10 / 13;
+  background-color: #ece4e8;
+  
+}
+
+.chauss{
+  grid-area : 10 / 1 / 16 / 4;
+}
+
+.chaussure {
+  grid-area : 10 / 1 / 16 / 4;
+  display: flex;
+  width: 99%;
+  height: 90%;
+  z-index: 2;
+}
+
+.image:hover{
+  display: none;
+}
+
+.cevimod {
+  grid-area : 10 / 4 / 16 / 7;
+}
+
+.vetement {
+  grid-area: 10 / 4 / 16 / 7;
+  display: flex;
+  width: 95%;
+  height: 99%;
+  z-index: 2;
+  filter: grayscale(70%)
+}
+
+.etudes {
+  grid-area : 10 / 7 / 16 / 10;
+}
+
+.stages {
+  grid-area : 10 / 10 / 16 / 13;
+  
+}
+
+.stages table {
+  border-spacing: 15px 20px;
+}
+
+.stages img {
+  height: 40px;
+  width: 40px;
+  filter: grayscale(70%);
+  padding-left: 7px;
+}
+
+#allemagne {
+  height: 55px;
+  width: 55px;
+  padding-left: 0px;
+  filter: grayscale(50%);
+}
+
+.langues {
+  grid-area : 16 / 1 / 21 / 5;
+  z-index: 2;
+  color: #434a5e;
+  font-family: amatic;
+  font-size: 20px;
+}
+.monde{
+  grid-area : 16 / 1 / 21 / 5;
+  z-index:1;
+  display: flex;
+  width: 90%;
+  height: 100%;
+  opacity: 0.40;
+}
+
+.langues table {
+  border-spacing: 10px;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+.loisirs {
+  grid-area : 16 / 5 / 21 / 9;
+}
+
+.contact {
+  grid-area : 16 / 9 / 21 / 13;
+}
+
+.contact h2 {
+  padding-top: 60px;
+  color:#6b799e;
+}
+
+.loisirs table {
+  border-spacing: 20px 10px;
+  text-align: center;
+}
+
+#ilove {
+  filter: grayscale(80%);
+  text-align: center;
+}
+#avion {
+  height: 100px;
+  width : 100px;
+  opacity: 0.6;
+}
+#livre {
+  height: 130px;
+  width : 130px;
+  opacity: 0.6;
+}
+#recycle {
+  height: 60px;
+  width : 60px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+
+
