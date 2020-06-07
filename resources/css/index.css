@@ -86,7 +86,7 @@ article {
 }
 
 article h1 {
-  text-align: center justify;
+  text-align: justify;
   font-size: 40px;
   color: #9C8F96;
 }
@@ -150,17 +150,17 @@ footer {
   color: #9C8F96;
   font-family: amatic, Arial, sans-serif;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .box h3 {
   font-size: 20px;
   font-family: amatic, Arial, sans-serif;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
-.nom {
+.name {
   grid-area : 2 / 1 / 4 / 4;
   font-family: amatic, Arial, sans-serif;
   font-size: 60px;
@@ -178,7 +178,7 @@ footer {
   line-height: 40px;
 }
 
-#specialite {
+#spe {
   font-size: 30px;
   margin-top: 0;
 }
@@ -205,7 +205,7 @@ footer {
   grid-area : 10 / 1 / 16 / 4;
 }
 
-.chaussure {
+.shoe {
   grid-area : 10 / 1 / 16 / 4;
   display: flex;
   width: 99%;
@@ -221,7 +221,7 @@ footer {
   grid-area : 10 / 4 / 16 / 7;
 }
 
-.vetement {
+.cloth {
   grid-area: 10 / 4 / 16 / 7;
   display: flex;
   width: 95%;
@@ -230,41 +230,41 @@ footer {
   filter: grayscale(70%)
 }
 
-.etudes {
+.studies {
   grid-area : 10 / 7 / 16 / 10;
 }
 
-.stages {
+.internship {
   grid-area : 10 / 10 / 16 / 13;
   
 }
 
-.stages table {
+.internship table {
   border-spacing: 15px 20px;
 }
 
-.stages img {
+.internship img {
   height: 40px;
   width: 40px;
   filter: grayscale(70%);
   padding-left: 7px;
 }
 
-#allemagne {
+#germany {
   height: 55px;
   width: 55px;
-  padding-left: 0px;
+  padding-left: 0;
   filter: grayscale(50%);
 }
 
-.langues {
+.language {
   grid-area : 16 / 1 / 21 / 5;
   z-index: 2;
   color: #434a5e;
   font-family: amatic, Arial, sans-serif;
   font-size: 20px;
 }
-.monde{
+.world{
   grid-area : 16 / 1 / 21 / 5;
   z-index:1;
   display: flex;
@@ -273,13 +273,13 @@ footer {
   opacity: 0.40;
 }
 
-.langues table {
+.language table {
   border-spacing: 10px;
   margin-left: 80px;
   margin-top: 40px;
 }
 
-.loisirs {
+.hobby {
   grid-area : 16 / 5 / 21 / 9;
 }
 
@@ -292,7 +292,7 @@ footer {
   color:#6b799e;
 }
 
-.loisirs table {
+.hobby table {
   border-spacing: 20px 10px;
   text-align: center;
 }
@@ -301,12 +301,12 @@ footer {
   filter: grayscale(20%);
   text-align: center;
 }
-#avion {
+#plane {
   height: 90px;
   width : 90px;
   opacity: 0.6;
 }
-#livre {
+#book {
   height: 130px;
   width : 130px;
   opacity: 0.8;
@@ -323,12 +323,11 @@ footer {
 }
 /* Projets*/
 
-.chargement{
+.loading{
   grid-area : 5 / 1 / 8 / 5;
   text-align : center;
   color: #9C8F96;
 }
-
 
 
 
