@@ -11,17 +11,20 @@
   font-style: normal;
 }
 
-
 body {
   margin: 0 auto;
+  margin-bottom: 60px;
+  height: 100%;
   font-family: open, Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 nav {
   background-color: #a6c2ce;
   height: 60px;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
   position: fixed;
 }
 
@@ -52,37 +55,36 @@ nav a:hover{
   color: #6b799e;
 }
 
-.grid {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 0;
-  grid-template: repeat(12,60px)/ repeat(4, 1fr);
-}
 
 /* Page d'accueil */
+
 header {
-  grid-area: 1 / 1 / 6 / 5;
-  display: flex;
+ width: 100%;
+ height: 25rem;
+ position: relative;
 }
 
 header img {
- width: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-
 .author {
-  grid-area: 3 / 4 / 4 / 5;
   z-index: 2;
-  color: White;
-  font-size: 40px;
+  color: white;
+  position: absolute;
+  font-size: 3rem;
   font-family: amatic, Arial, sans-serif;
   font-weight: bold;
-  justify-self: center;
+  bottom: 10rem;
+  left: 65rem;
 }
 
 article {
-  grid-area: 6 / 2 / 11 / 4;
   font-size: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 article h1 {
@@ -104,9 +106,19 @@ article a:hover{
   font-weight: bold;
 }
 
-aside {
-  grid-area: 7 / 1 / 9 / 2; 
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  flex-grow: 1;
 }
+
+aside {
+  position: absolute;
+  top: 30rem;
+  margin-right: 2rem;
+}
+
 aside i {
   color:#6B799E;
 }
@@ -120,13 +132,45 @@ aside li {
   list-style-type: none;
 }
 
+.mobile {
+  display: none;
+}
+
+.footercontainer{
+  position: relative;
+  width: 100%;
+}
+
 footer {
-  background-color: #A6C2CE ;
-  grid-area: 12 / 1 / 13 / 5;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-top: 1rem;
+  width: 100%;
   text-align: center;
   color:white;
-  padding-top: 20px;
+  background-color: #A6C2CE;
+}
+
+@media only screen and (max-width: 800px), (orientation: portrait){
+  header {
+    max-height: 20rem;
+  }
+  aside {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile i {
+    color: #6B799E; 
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /* Mon CV */
@@ -318,9 +362,6 @@ footer {
   opacity: 0.6;
 }
 
-.cvfooter {
-  grid-area: 21 / 1 / 22 / 13;
-}
 /* Projets*/
 
 .loading{
