@@ -12,19 +12,18 @@
 }
 
 body {
-  margin: 0 auto;
-  margin-bottom: 60px;
+  width: 100%;
   height: 100%;
+  margin: 0 auto;
+  position: relative;
   font-family: open, Arial, sans-serif;
-  display: grid;
-  grid-template-rows: 1fr auto;
 }
 
 nav {
   background-color: #a6c2ce;
   height: 60px;
   width: 100%;
-  z-index: 5;
+  z-index: 4;
   position: fixed;
 }
 
@@ -78,6 +77,7 @@ header img {
   font-weight: bold;
   bottom: 10rem;
   left: 65rem;
+  min-width: 200px;
 }
 
 article {
@@ -116,6 +116,7 @@ article a:hover{
 aside {
   position: absolute;
   top: 30rem;
+  left: 0.3rem;
   margin-right: 2rem;
 }
 
@@ -136,57 +137,42 @@ aside li {
   display: none;
 }
 
-.footercontainer{
-  position: relative;
-  width: 100%;
-}
-
 footer {
-  position: absolute;
-  bottom: 0;
-  margin-top: 1rem;
-  width: 100%;
   text-align: center;
-  color:white;
-  background-color: #A6C2CE;
+  background-color:#A6C2CE;
+  color: white;
+  max-height: 50px;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
 }
 
-@media only screen and (max-width: 800px), (orientation: portrait){
-  header {
-    max-height: 20rem;
-  }
-  aside {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-    padding-bottom: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .mobile i {
-    color: #6B799E; 
-    margin-left: 1rem;
-    margin-bottom: 3rem;
-  }
-}
 
 /* Mon CV */
-
-.cvgrid {
-  display: grid;
-  grid-template: repeat(21, 60px) / repeat(12, 1fr);
+.cvcontainer {
   width: 100%;
+  height: 100%;
+  position: relative;
+  top: 60px;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
 .box {
   border-bottom: 4px solid #9C8F96;
   border-right: 1px solid #9C8F96;
   font-size: 17px;
-  padding : 20px 20px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: justify;
+  flex: 1 1 auto;
 }
 
 .box h2 {
@@ -204,83 +190,102 @@ footer {
   margin-top: 0;
 }
 
+/* LINE A */
+.a {
+  height: 50px;
+}
+
 .name {
-  grid-area : 2 / 1 / 4 / 4;
   font-family: amatic, Arial, sans-serif;
   font-size: 60px;
-  color: white;
+  width: 25%;
+  height: 100%;
+  min-width: 220px;
+  color: rgb(228, 210, 210);
   text-align: center;
-  padding-top: 20px;
   background-color: #ece4e8;
 }
 
 .presentation {
-  grid-area : 2 / 4 / 4 / 13;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
-  padding-top: 10px;
+  width: 75%;
+  min-width: 530px;
+  height: 100%;
   line-height: 40px;
 }
 
 #spe {
   font-size: 30px;
   margin-top: 0;
+} 
+ /* LINE B */
+
+.b {
+  min-height: 300px;
+  max-height: 400px;
+  width: 100%;
+  top:  63px;
 }
 
 .photo {
-  grid-area : 4 / 1 / 10 / 5;
+  width: 25%;
+  min-height: 300px;
   background-image: url("../images/moi.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
+  min-width: 400px;
 }
 
 .codeacademy {
-  grid-area : 4 / 5 / 10/ 9;
+  width: 25%;
+  padding-top: 5px;
 }
 
 .vinted {
-  grid-area : 4 / 9 / 10 / 13;
   background-color: #ece4e8;
-  
+  width: 50%;
+  padding-top: 5px;
+}
+
+/* LINE C */
+.c {
+  min-height: 300px;
+  max-height: 300px;
+  width: 100%;
+  top:  63px;
 }
 
 .chauss{
-  grid-area : 10 / 1 / 16 / 4;
-}
-
-.shoe {
-  grid-area : 10 / 1 / 16 / 4;
-  display: flex;
-  width: 99%;
-  height: 90%;
-  z-index: 2;
-}
-
-.image:hover{
-  display: none;
+  width: 35%;
+  min-width:250px;
+  padding-top: 5px;
 }
 
 .cevimod {
-  grid-area : 10 / 4 / 16 / 7;
-}
-
-.cloth {
-  grid-area: 10 / 4 / 16 / 7;
-  display: flex;
-  width: 95%;
-  height: 99%;
-  z-index: 2;
-  filter: grayscale(70%)
+  padding-top: 5px;
+  width: 30%;
+  min-width: 200px;
 }
 
 .studies {
-  grid-area : 10 / 7 / 16 / 10;
+  width: 35%;
+  min-width: 250px;
+}
+
+/* LINE D*/
+.d {
+  min-height: 350px;
+  max-height: 350px;
+  width: 100%;
+  top:  63px;
 }
 
 .internship {
-  grid-area : 10 / 10 / 16 / 13;
-  
+  padding-top: 5px;
+  width: 30%;
+  min-width: 250px;
 }
 
 .internship table {
@@ -302,47 +307,42 @@ footer {
 }
 
 .language {
-  grid-area : 16 / 1 / 21 / 5;
-  z-index: 2;
-  color: #434a5e;
+  width: 20%;
+  min-width: 250px;
+  color: #6B799E;
   font-family: amatic, Arial, sans-serif;
   font-size: 20px;
-}
-.world{
-  grid-area : 16 / 1 / 21 / 5;
-  z-index:1;
-  display: flex;
-  width: 90%;
-  height: 100%;
-  opacity: 0.40;
 }
 
 .language table {
   border-spacing: 10px;
-  margin-left: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-top: 40px;
+  min-width: 200px;
+}
+
+.language table th {
+  min-width: 100px;
+}
+.language img {
+  bottom: 200px;
+  opacity: 0.5;
 }
 
 .hobby {
-  grid-area : 16 / 5 / 21 / 9;
-}
-
-.contact {
-  grid-area : 16 / 9 / 21 / 13;
-}
-
-.contact h2 {
-  padding-top: 60px;
-  color:#6b799e;
+  width: 30%;
+  min-width: 380px;
 }
 
 .hobby table {
   border-spacing: 20px 10px;
   text-align: center;
+  max-width: 350px;
 }
 
 #ilove {
-  filter: grayscale(20%);
+  filter: grayscale(40%);
   text-align: center;
 }
 #plane {
@@ -362,6 +362,31 @@ footer {
   opacity: 0.6;
 }
 
+.contact {
+  width: 20%;
+  max-width: 200px;
+}
+
+.contact h2 {
+  padding-top: 60px;
+  color:#6b799e;
+}
+
+/* CV FOOTER */
+.e {
+  min-height: 50px;
+  max-height: 50px;
+  width: 100%;
+  top:  63px;
+  color:white;
+  background-color: #A6C2CE;
+  }
+.cvfooter {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
 /* Projets*/
 
 .loading{
@@ -370,8 +395,62 @@ footer {
   color: #9C8F96;
 }
 
+/*PETITS ECRANS*/
+@media only screen and (max-width: 1250px){
+ .author {
+    display: none;
+  }
 
+  .d {
+    flex-wrap: wrap; 
+  }
 
+}
 
+@media only screen and (max-width: 1000px), (orientation: portrait){
+  header {
+    max-height: 20rem;
+  }
 
+  aside {
+    display: none;
+  }
 
+  .mobile {
+    display: block;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile i {
+    color: #6B799E; 
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .b {
+    flex-wrap: wrap;
+  }
+
+  .c {
+    flex-wrap: wrap;
+    top: 265px;
+  }
+
+  .d {
+    flex-wrap: wrap;
+    top: 500px;
+  }
+
+  .e {
+    top: 650px;
+    flex-wrap: wrap;
+  }
+}
