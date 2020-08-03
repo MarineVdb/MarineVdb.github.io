@@ -164,7 +164,8 @@ footer {
 }
 
 .box {
-  border-bottom: 4px solid #9C8F96;
+  border-bottom: 2px solid #9C8F96;
+  border-top: 2px solid #9C8F96;
   border-right: 1px solid #9C8F96;
   font-size: 17px;
   padding-bottom: 40px;
@@ -199,8 +200,8 @@ footer {
   font-family: amatic, Arial, sans-serif;
   font-size: 60px;
   width: 25%;
+  min-width: 200px;
   height: 100%;
-  min-width: 220px;
   color: rgb(228, 210, 210);
   text-align: center;
   background-color: #ece4e8;
@@ -222,44 +223,41 @@ footer {
  /* LINE B */
 
 .b {
-  min-height: 300px;
-  max-height: 400px;
   width: 100%;
-  top:  63px;
+  top:  64px;
+  flex-wrap: wrap;
 }
 
 .photo {
   width: 25%;
   min-height: 300px;
+  max-height: 450px;
+  min-width: 400px;
+  max-width: 500px;
   background-image: url("../images/moi.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
-  min-width: 400px;
 }
 
 .codeacademy {
-  width: 25%;
+  width: 40%;
   padding-top: 5px;
+  min-width: 180px;
+  max-width: 300px;
 }
 
 .vinted {
   background-color: #ece4e8;
-  width: 50%;
+  width: 35%;
   padding-top: 5px;
-}
-
-/* LINE C */
-.c {
-  min-height: 300px;
-  max-height: 300px;
-  width: 100%;
-  top:  63px;
+  min-width: 100px;
 }
 
 .chauss{
   width: 35%;
-  min-width:250px;
+  min-width:100px;
+  max-width: 300px;
   padding-top: 5px;
 }
 
@@ -441,7 +439,6 @@ footer {
 
   .c {
     flex-wrap: wrap;
-    top: 265px;
   }
 
   .d {
@@ -454,3 +451,5 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+
