@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: "Lexend Mega", sans-serif;
+    color: black;
+    background-color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.logo {
+    width: 150px;
+    height: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+    flex-wrap: wrap;
+}
+
+.navbar p {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color:#000080;
+}
+
+.navbar a:hover {
+    color: lightgrey;
+}
+
+.main {
+    opacity: 0.9;
+}
+
+#mission {
+    display: flex;
+    height: 500px;
+    background-image: url(./ready.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.content {
+    display: block;
+    padding: 10px 10px;
+}
+
+#mission .content {
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    min-height: 150px;
+}
+
+#mission h1 {
+    color: #000080;
+    font-size: 30px;
+}
+
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    padding: 10px;
+    height: auto;
+}
+
+.product span{
+    padding: 5px;
+    min-width: 240px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.teamcontainer {
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    display: flex;
+    background-image: url(./shoes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-around;
+    color:white;
+}
+
+.teammate {
+    padding-top: 15px;
+    text-align: center;
+    flex-basis: 280px;
+}
+
+h2 {
+    color: #000080;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.teammate img {
+    height: 250px;
+    width: 170px;
+    filter: grayscale(50%);
+}
+
+

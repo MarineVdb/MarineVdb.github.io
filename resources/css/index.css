@@ -11,7 +11,15 @@
   font-style: normal;
 }
 
+* {
+  margin:0;
+  padding:0;
+  }
+
+  body, html{height:100%;}
+
 body {
+  text-align:center;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -57,6 +65,13 @@ nav a:hover{
 
 /* Page d'accueil */
 
+#main{
+  max-width:1280px;
+  min-height:100%;
+  margin:0 auto;
+  position:relative;
+  }
+
 header {
  width: 100%;
  height: 25rem;
@@ -80,11 +95,22 @@ header img {
   min-width: 200px;
 }
 
+.line {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.c {
+  margin-top: 20px;
+}
+
 article {
   font-size: 20px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 article h1 {
@@ -106,18 +132,9 @@ article a:hover{
   font-weight: bold;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  flex-flow: column;
-  flex-grow: 1;
-}
-
 aside {
-  position: absolute;
-  top: 30rem;
-  left: 0.3rem;
-  margin-right: 2rem;
+  max-width: 100px;
+  min-width: 50px;
 }
 
 aside i {
@@ -141,11 +158,10 @@ footer {
   text-align: center;
   background-color:#A6C2CE;
   color: white;
-  max-height: 50px;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  position: relative;
+  height: 50px;
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
 
 
@@ -157,12 +173,6 @@ footer {
   top: 60px;
 }
 
-.line {
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-
 .box {
   border-bottom: 2px solid #9C8F96;
   border-top: 2px solid #9C8F96;
@@ -170,7 +180,7 @@ footer {
   font-size: 17px;
   padding-bottom: 40px;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
   text-align: justify;
   flex: 1 1 auto;
@@ -243,15 +253,15 @@ footer {
 .codeacademy {
   width: 40%;
   padding-top: 5px;
-  min-width: 180px;
-  max-width: 300px;
+  min-width: 150px;
+  /*max-width: 380px;*/
 }
 
 .vinted {
   background-color: #ece4e8;
   width: 35%;
   padding-top: 5px;
-  min-width: 100px;
+  min-width: 50px;
 }
 
 .chauss{
@@ -265,19 +275,12 @@ footer {
   padding-top: 5px;
   width: 30%;
   min-width: 200px;
+  max-width: 300px;
 }
 
 .studies {
   width: 35%;
   min-width: 250px;
-}
-
-/* LINE D*/
-.d {
-  min-height: 350px;
-  max-height: 350px;
-  width: 100%;
-  top:  63px;
 }
 
 .internship {
@@ -335,8 +338,9 @@ footer {
 
 .hobby table {
   border-spacing: 20px 10px;
-  text-align: center;
   max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #ilove {
@@ -362,7 +366,6 @@ footer {
 
 .contact {
   width: 20%;
-  max-width: 200px;
 }
 
 .contact h2 {
@@ -370,27 +373,25 @@ footer {
   color:#6b799e;
 }
 
-/* CV FOOTER */
-.e {
-  min-height: 50px;
+.cvfooter {
+  text-align: center;
+  background-color:#A6C2CE;
+  color: white;
   max-height: 50px;
   width: 100%;
-  top:  63px;
-  color:white;
-  background-color: #A6C2CE;
-  }
-.cvfooter {
-  width: 100%;
-  text-align: center;
-  margin: auto;
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
+  top: 50px;
 }
 
 /* Projets*/
 
 .loading{
-  grid-area : 5 / 1 / 8 / 5;
   text-align : center;
   color: #9C8F96;
+  position: relative;
+  top: 164px;
 }
 
 /*PETITS ECRANS*/
@@ -398,11 +399,6 @@ footer {
  .author {
     display: none;
   }
-
-  .d {
-    flex-wrap: wrap; 
-  }
-
 }
 
 @media only screen and (max-width: 1000px), (orientation: portrait){
@@ -427,28 +423,11 @@ footer {
     margin-bottom: 3rem;
   }
 
-  footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
+}
 
-  .b {
-    flex-wrap: wrap;
-  }
-
-  .c {
-    flex-wrap: wrap;
-  }
-
-  .d {
-    flex-wrap: wrap;
-    top: 500px;
-  }
-
-  .e {
-    top: 650px;
-    flex-wrap: wrap;
+@media only screen and (min-width: 1100px) {
+  .codeacademy {
+    max-width: 250px;
   }
 }
 
